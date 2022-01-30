@@ -1,14 +1,14 @@
 package com.jumia.country.model;
 
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class PhoneTest {
 
     private Phone phone;
 
-    @Before
+    @BeforeEach
     public void init(){
         phone = new Phone("34567","Egypt","Valid","002");
     }

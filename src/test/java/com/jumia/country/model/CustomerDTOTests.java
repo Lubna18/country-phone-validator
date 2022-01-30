@@ -1,14 +1,14 @@
 package com.jumia.country.model;
 
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-public class CustomerDTOTest {
+public class CustomerDTOTests {
 
     private CustomerDTO customerDTO;
 
-    @Before
+    @BeforeEach
     public void init() {
         customerDTO = new CustomerDTO();
         customerDTO.setId(1);

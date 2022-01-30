@@ -7,19 +7,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
-import org.springframework.test.context.jdbc.Sql;
-
-import javax.sql.DataSource;
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
-@JdbcTest
-@Sql({"sample.db"})
-public class
-CustomerDAOTest {
+public class CustomerDAOTest {
 
     @InjectMocks
     private CustomerDAO customerDAO;
