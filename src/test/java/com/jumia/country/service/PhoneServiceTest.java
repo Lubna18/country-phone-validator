@@ -3,9 +3,11 @@ package com.jumia.country.service;
 import com.jumia.country.model.CustomerDAO;
 import com.jumia.country.model.Phone;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import java.util.ArrayList;
@@ -18,7 +20,15 @@ public class PhoneServiceTest {
     private PhoneService phoneService;
 
     @InjectMocks
+    private CountryService countryService;
+
+    @Mock
     private CustomerDAO customerDAO;
+
+    @Before
+    public void init(){
+        phoneService = new PhoneService(countryService, customerDAO);
+    }
 
     @Test
     public void validatePhoneNumbersTest(){
